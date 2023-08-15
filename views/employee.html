@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="/views/employee.css">
+</head>
+
+<body>
+    <!-- Phần đầu -->
+    <header>
+        <div class="header-left">
+            <div class="header-left--icon"></div>
+            <div class="name-company">
+                CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI PHÚC
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="header-right--ring"></div>
+            <div class="information">
+                <div class="avatar"></div>
+                <select class="e-name">
+                    <option value="a">Nguyễn Ngọc Chiến</option>
+                    <option value="b">Nguyễn Văn B</option>
+                    <option value="c">Phạm Văn Tiến</option>
+                    <option value="d">Nguyễn Công Bằng</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!--Phần thân-->
+    <menu>
+        <div class="menu-title">
+            <div class="sidebar"></div>
+            <div class="logo"></div>
+            <span class="word">KẾ TOÁN</span>
+        </div>
+
+        <div class="menu-item menu-item--selected ">
+            <div class="menu-item__icon icon-overview"></div>
+            <div class="menu-item__text">Tổng quan</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-cash"></div>
+            <div class="menu-item__text">Tiền mặt</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-deposits"></div>
+            <div class="menu-item__text">Tiền gửi</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-buy"></div>
+            <div class="menu-item__text">Mua hàng</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-sell"></div>
+            <div class="menu-item__text">Bán hàng</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-bill"></div>
+            <div class="menu-item__text">Quản lý hóa đơn</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-store"></div>
+            <div class="menu-item__text">Kho</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-tool"></div>
+            <div class="menu-item__text">Công cụ dụng cụ</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-asset"></div>
+            <div class="menu-item__text">Tài sản cố định</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-tax"></div>
+            <div class="menu-item__text">Thuế</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-price"></div>
+            <div class="menu-item__text">Giá thành</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-synthetic"></div>
+            <div class="menu-item__text">Tổng hợp</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-budget"></div>
+            <div class="menu-item__text">Ngân sách</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-report"></div>
+            <div class="menu-item__text">Báo cáo</div>
+        </div>
+
+        <div class="menu-item ">
+            <div class="menu-item__icon icon-analyst"></div>
+            <div class="menu-item__text">Phân tích tài chính</div>
+        </div>
+    </menu>
+
+    <!--Phần chính-->
+    <div class="content">
+        <div class="page__header">
+            <div class="page-header__left heading">
+                Nhân viên
+            </div>
+            <div class="page-header__right">
+                <button id="add--btn" class="btn btn--default">Thêm mới nhân viên</button>
+            </div>
+        </div>
+        <div class="page__content">
+            <div class="table">
+                <div class="table__toolbar">
+                    <input type="text" class="input btn-icon btn-icon__search" placeholder="Tìm theo mã, tên nhân viên">
+                    <button id="btn-refresh" class="btn-refresh"></button>
+                </div>
+                <div class="table-container">
+                    <table class="tbEmployeeList">
+                        <thead>
+                            <tr>
+                                <th class="text-align--left"><input type="checkbox"></th>
+                                <th class="text-align--left">Mã nhân viên</th>
+                                <th class="text-align--left">Tên nhân viên</th>
+                                <th class="text-align--left">Giới tính</th>
+                                <th class="text-align--left">Ngày sinh</th>
+                                <th class="text-align--left" title="Số chứng minh nhân dân">Số CMND</th>
+                                <th class="text-align--left">Chức danh</th>
+                                <th class="text-align--left">Tên đơn vị</th>
+                                <th class="text-align--left">Lương</th>
+                                <th class="text-align--left">Chức năng</th>
+                                <!-- <th class="text-align--left">Số tài khoản</th>
+                                    <th class="text-align--left">Tên ngân hàng</th>
+                                    <th class="text-align--left">Chi nhánh TK ngân hàng</th>
+                                <th class="text-align--left" style="width: 50px;">Chức năng</th> -->
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV001</td>
+                                <td class="text-align--left">Nguyễn Ngọc Chiến</td>
+                                <td class="text-align--left">Nam</td>
+                                <td class="text-align--left">9/8/2003</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân">46464641654</td>
+                                <td class="text-align--left">Nhân viên</td>
+                                <td class="text-align--left">Phòng hành chính</td>
+                                <td class="text-align--left">30000000</td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-001088</td>
+                                <td class="text-align--left">Tran Quan</td>
+                                <td class="text-align--left">Nữ</td>
+                                <td class="text-align--left">2020-12-06</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân">564364564796</td>
+                                <td class="text-align--left">Nhân viên</td>
+                                <td class="text-align--left">Phòng đào tạo</td>
+                                <td class="text-align--left">5000000</td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-001078</td>
+                                <td class="text-align--left">Nguyen Van Minh</td>
+                                <td class="text-align--left">Nam</td>
+                                <td class="text-align--left">2020-12-06</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân">1313131646</td>
+                                <td class="text-align--left">Trưởng phòng</td>
+                                <td class="text-align--left">Phòng Nhân Sự</td>
+                                <td class="text-align--left">50000000</td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-001067</td>
+                                <td class="text-align--left">Quang</td>
+                                <td class="text-align--left">Nam</td>
+                                <td class="text-align--left">2023-05-02</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân">15616666656</td>
+                                <td class="text-align--left">Nhân viên</td>
+                                <td class="text-align--left">Phòng Hành Chính</td>
+                                <td class="text-align--left">7000000</td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-001066</td>
+                                <td class="text-align--left">Nguyen Thi B</td>
+                                <td class="text-align--left">Nữ</td>
+                                <td class="text-align--left">2023-05-02</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân"></td>
+                                <td class="text-align--left"></td>
+                                <td class="text-align--left">Phòng Công Nghệ Thông Tin</td>
+                                <td class="text-align--left"></td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-001044</td>
+                                <td class="text-align--left">Nguyen Van A"</td>
+                                <td class="text-align--left">Nữ</td>
+                                <td class="text-align--left">2023-05-02</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân"></td>
+                                <td class="text-align--left"></td>
+                                <td class="text-align--left">Phòng Công Nghệ Thông Tin</td>
+                                <td class="text-align--left"></td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-001012</td>
+                                <td class="text-align--left">Le Lam</td>
+                                <td class="text-align--left">Nữ</td>
+                                <td class="text-align--left">2023-05-16</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân"></td>
+                                <td class="text-align--left"></td>
+                                <td class="text-align--left">Phòng Kế Toán</td>
+                                <td class="text-align--left"></td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+
+                            <tr class="remove">
+                                <td class="text-align--left"><input type="checkbox"></td>
+                                <td class="text-align--left">NV-00109</td>
+                                <td class="text-align--left">Lê Hồng Xiêm</td>
+                                <td class="text-align--left">Nam</td>
+                                <td class="text-align--left">2020-12-06</td>
+                                <td class="text-align--left" title="Số chứng minh nhân dân"></td>
+                                <td class="text-align--left"></td>
+                                <td class="text-align--left">Phòng Kế Toán</td>
+                                <td class="text-align--left"></td>
+                                <td class="tex-align--left"><button class="remove--item">Ẩn</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table__paging">
+                    <div class="paging">
+                        <div class="paging-left">Tổng số: <b>8</b> bản ghi</div>
+                        <div class="paging-right">
+                            <div class="paging-right__pagesize">
+                                <div class="paging-right__cbx">
+                                    <select name="" id="">
+                                        <option value="1">10 bản ghi trên một trang</option>
+                                        <option value="2">20 bản ghi trên một trang</option>
+                                        <option value="3">30 bản ghi trên một trang</option>
+                                        <option value="4">40 bản ghi trên một trang</option>
+                                        <option value="5">50 bản ghi trên một trang</option>
+                                    </select>
+                                </div>
+
+                                <div class="paging-right__index">
+                                    <p>Trước</p>
+                                    <div class="number-index">
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>3</p>
+                                        <p>...</p>
+                                        <p>50</p>
+                                    </div>
+                                    <p>Sau</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Form chi tiết -->
+    <div id="frmDetail" class="popup" hidden>
+        <div class="popup-form">
+            <button class="popup__button btnCancel"></button>
+            <div class="popup__header">
+                <div class="popup__title">Thông tin nhân viên</div>
+                <div class="popup__checkbox popup__checkbox--customer">
+                    <input type="radio" name="check" class="checkbox1">
+                    <span class="checkmark"></span>
+                    <label for="checkbox1">Là nhân viên</label>
+                </div>
+                <div class="popup__checkbox popup__checkbox--supplier">
+                    <input type="radio" name="check" class="checkbox2">
+                    <span class="checkmark"></span>
+                    <label for="checkbox2">Là nhà cung cấp</label>
+                </div>
+            </div>
+            <div class="popup__body">
+                <div class="employee-info">
+                    <!-- Thông tin 1 -->
+                    <div class="form-group general-info-left">
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper" style="width: calc(50% - 8px);">
+                                <label for="">Mã<span class="required">*</span></label>
+                                <input id="txtEmployeeCode" class="input--required" type="text">
+                            </div>
+
+                            <div class="input-wrapper" style=" width: 50%;">
+                                <label for="">Tên<span class="required">*</span></label>
+                                <input type="input" id="txtEmployeeCode" class="input--required">
+                            </div>
+                        </div>
+
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="">Đơn vị<span class="required">*</span></label>
+                                <select id="txtEmployeeCode">
+                                    <option value="pb">--Chọn phòng ban--</option>
+                                    <option value="ns">Phòng nhân sự</option>
+                                    <option value="sx">Phòng sản xuất</option>
+                                    <option value="hc">Phòng hành chính</option>
+                                    <option value="dt">Phòng đào tạo</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="">Chức danh</label>
+                                <input id="txtEmployeeCode" type="text" placeholder="Nhân viên">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Thông tin 2 -->
+                    <div class="form-group general-info-right">
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="">Ngày sinh<span class="required">*</span></label>
+                                <input id="txtEmployeeCode" class="input--required" type="date">
+
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Giới tính<span class="required">*</span></label>
+                                <div class="EmployeeGender">
+                                    <div class="radio-gender">
+                                        <input type="radio" name="gt" class="radiobtn">
+                                        <span class="checkmark"></span>
+                                        <label for="radiobtn">Nam</label>
+                                    </div>
+
+                                    <div class="radio-gender">
+                                        <input type="radio" name="gt" class="radiobtn">
+                                        <span class="checkmark"></span>
+                                        <label for="radiobtn">Nữ</label>
+                                    </div>
+
+                                    <div class="radio-gender">
+                                        <input type="radio" name="gt" class="radiobtn">
+                                        <span class="checkmark"></span>
+                                        <label for="radiobtn">Khác</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="" title="Số chứng minh nhân dân">Số CMND<span
+                                        class="required">*</span></label>
+                                <input id="txtEmployeeCode" class="input--required" type="text">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Ngày cấp<span class="required">*</span></label>
+                                <input type="date" id="txtEmployeeCode" class="input--required">
+                            </div>
+                        </div>
+
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="">Nơi cấp<span class="required">*</span></label>
+                                <input id="txtEmployeeCode" class="input--required" type="text" placeholder="Nam Định">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thông tin 3 -->
+                    <div class="form-group contact-info">
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="">Địa chỉ<span class="required">*</span></label>
+                                <input id="txtEmployeeCode" class="input--required" type="text"
+                                    placeholder="146 Phạm Văn Chiêu">
+
+                            </div>
+                        </div>
+
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="" title="Điện thoại di động">ĐT di động</label>
+                                <input id="txtEmployeeCode" type="text" placeholder="0963579744">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="" title="Điện thoại cố định">ĐT cố định</label>
+                                <input id="txtEmployeeCode" type="text" placeholder="(764)749-6478">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Email</label>
+                                <input id="txtEmployeeCode" type="text" placeholder="procuon856@example.com">
+                            </div>
+
+                        </div>
+
+                        <div class="m-row m-flex m-col-gap-8">
+                            <div class="input-wrapper">
+                                <label for="">Tài khoản ngân hàng</label>
+                                <input id="txtEmployeeCode" type="text" placeholder="944147">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Tên ngân hàng</label>
+                                <select id="txtEmployeeCode">
+                                    <option value="17">--Chọn ngân hàng--</option>
+                                    <option value="1">Vietcombank</option>
+                                    <option value="2">MB Bank</option>
+                                    <option value="3">VPBank</option>
+                                    <option value="4">Techcombank</option>
+                                    <option value="5">MSB</option>
+                                    <option value="6">Sacombank</option>
+                                    <option value="7">Ocean Bank</option>
+                                    <option value="8">TPBank</option>
+                                    <option value="9">Vietinbank</option>
+                                    <option value="10">BIDV</option>
+                                    <option value="11">Agribank</option>
+                                    <option value="12">SHB</option>
+                                    <option value="13">SAIGONBANK</option>
+                                    <option value="14">ACB</option>
+                                    <option value="15">SCB</option>
+                                    <option value="16">SHINHANBANK</option>
+                                </select>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Chi nhánh</label>
+                                <input id="txtEmployeeCode" type="text" placeholder="Chi nhánh 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="footer__right">
+                    <button class="btn">Cất</button>
+                    <button class="btn btn--default">Cất và thêm</button>
+                </div>
+
+                <div class="footer__left">
+                    <button class="btn btnCancel">Hủy</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Hiển thị thông tin -->
+    <!-- <div class="toast-list" hidden>
+        <div class="toast" >
+            <div class="toast__icon toast__icon--warning"></div>
+            <div class="toast__text"><b style="color: #F49342;">Cảnh báo!</b> Dữ liệu của bạn đã bị thay đổi bởi người dùng khác. </div>
+            <div class="toast__button"></div>
+        </div>
+
+        <div class="toast ">
+            <div class="toast__icon toast__icon--info"></div>
+            <div class="toast__text"><b style="color: #3186F5;">Thông tin!</b> Bạn nên đọc kỹ nội dung trước khi gửi phê duyệt. </div>
+            <div class="toast__button"></div>
+        </div>
+
+        <div class="toast ">
+            <div class="toast__icon toast__icon--error"></div>
+            <div class="toast__text"><b style="color: #DE3618;">Lỗi!</b> Không thể cập nhật được dữ liệu. Vui lòng kiểm tra lại kết nối internet. </div>
+            <div class="toast__button"></div>
+        </div>
+
+        <div class="toast " >
+            <div class="toast__icon toast__icon--success"></div>
+            <div class="toast__text"><b style="color: #50B83C;">Thành công!</b> Công việc đã bị xóa. </div>
+            <div class="toast__button"></div>
+        </div>
+    </div> -->
+
+    <!-- Javascript -->
+    <script src="../js/employee.js"></script>
+
+
+</body>
+
+</html>

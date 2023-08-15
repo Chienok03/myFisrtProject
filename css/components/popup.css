@@ -1,0 +1,96 @@
+.popup{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000077;
+  
+}
+
+.popup-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 800px;
+    background-color:#fff;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+   
+}
+
+.popup__header{
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+
+.popup__title{
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 12px;
+}
+
+.popup__checkbox{
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    margin-right: 32px;
+    
+}
+
+.popup__checkbox label{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.popup__body{
+    padding: 0 24px 24px 24px;
+    
+    box-sizing: border-box;
+}
+
+.popup__footer{
+    border-top: 1px solid #E0E0E0;
+    padding: 12px 24px ;
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.popup__footer button{
+    border: 1px solid #e0e0e0;
+    color: #212121;
+    background-color: #fff;
+}
+
+.popup__button{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-image: url(/assets/icon/icons8-close-24.png);
+    width: 24px;
+    height: 24px;
+    border: unset;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.popup__button:hover{
+    background-color: #ec0b0b;
+    border-radius: 4px;
+}
+
+.EmployeeGender{
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+}
+
+.radio-gender{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}

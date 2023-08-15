@@ -1,0 +1,56 @@
+
+/* components */
+@import url(./components/button.css);
+@import url(./components/input.css);
+@import url(./components/table.css);
+@import url(./components/popup.css);
+@import url(./components/paging.css);
+@import url(./components/toast.css);
+
+/* layout */
+@import url(./layout/content.css);
+@import url(./layout/header.css);
+@import url(./layout/menu.css);
+
+@media only screen and(max-width: 48em){
+    .menu{
+        display: none;
+    }
+}
+
+*{
+    font-family: Chien_font;
+}
+
+.heading{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+body{
+    margin: 0;
+    padding:0;
+}
+
+.m-flex{
+    display: flex;
+}
+
+.m-col-gap-8{
+    column-gap: 8px;
+}
+
+.m-row+.m-row{
+    margin-top: 14px;
+}
+
+.required{
+    color: #ff0000;
+}
+
+
+
+@font-face {
+    font-family: Chien_font;
+    src: url(../assets/font/GoogleSans-Regular.otf);
+}

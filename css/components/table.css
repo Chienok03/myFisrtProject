@@ -1,0 +1,61 @@
+.table{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+    overflow: auto;
+}
+
+.table__toolbar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 16px 16px 0 16px;
+}
+
+.table-container{
+    margin-top: 12px;
+    flex: 1;
+    border-radius: 6px;
+}
+
+.table__paging{
+    height: 56px;
+    border-top: 1px solid #babec5;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: scroll;
+    
+}
+
+thead th{
+    top: 0;
+    position: sticky;
+    background-color: #eceef1;
+    border-right: 1px solid #babec5;
+    font-size: 14px;
+}
+
+tr {
+    border-bottom: 1px solid #E0E1E4;
+    height: 40px;
+   
+}
+
+td,
+th {
+    border-right: 1px solid #E0E1E4;
+    padding: 0 16px;
+    text-align: center;
+}
+
+td {
+    font-weight: 500;
+    font-size: 13px;
+   
+}
+
+

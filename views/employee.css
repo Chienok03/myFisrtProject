@@ -1,0 +1,20 @@
+.employee-info{
+    display: flex;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    width: 100%;
+}
+
+.general-info-left{
+    width: calc(50% - 16px);
+   
+}
+
+.general-info-right{
+    width: 50%;
+}
+
+.contact-info{
+   width: 100%;
+}

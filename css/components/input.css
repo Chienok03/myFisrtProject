@@ -1,0 +1,47 @@
+input{
+    height: 36px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    font-weight: 400;
+    padding: 0 12px;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-wrapper select{
+    height: 36px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    font-weight: 400;
+    padding: 0 12px;
+}
+
+.input-wrapper label{
+    display: block;
+}
+
+.input-wrapper #txtEmployeeCode:focus{
+    border-color: #F49342;
+}
+
+
+.input--error{
+    border-color: #DE3618;
+}
+
+.error--info{
+    color: #DE3618;
+    font-size: 14px;
+}
+
+

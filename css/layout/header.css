@@ -1,0 +1,78 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    width: calc(100% - 200px);
+    align-items: center;
+    float: right;
+    
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+.header-left--icon{
+    height: 24px;
+    width: 24px;
+    background: url(/assets/Resource/img/Sprites.64af8f61.svg) no-repeat -847px -35px;
+    margin: 20px 5px 16px 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-left .name-company{
+    font-size: 14px;
+    border: unset;
+    outline: unset;
+    appearance: none;
+    background-color: unset;
+    font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.header-right .header-right--ring{
+    height: 24px;
+    width: 24px;
+    background: url(/assets/icon/icons8-notification-50.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.header-right .avatar{
+    height: 24px;
+    width: 24px;
+    background: url(/assets/icon/avatar-default.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+.header-right .information{
+    display: flex;
+    align-items: center;
+}
+
+.header-right .information .e-name{
+    border: unset;
+    outline: unset;
+    padding-left: 4px;
+    cursor: pointer;
+}
+
+
+
+
